@@ -1,4 +1,5 @@
-from browser import ajax
+from browser import ajax, document
+from browser.html import UL, LI
 import json
 
 class CharactersApi:
@@ -14,5 +15,28 @@ class CharactersApi:
         return lambda req:callback(json.loads(req.text))
 
 
+
+
+class Characters:
+    def __init__(self, list_id, api):
+        self._list = document[list_id]
+        self._api = api
+
+    def load(self):
+        self._api.get_all(self.show_list)
+
+    def show_list(self, items):
+        self._list.html = ""
+        self._list <= self._generate_list(items)
+
+    def _generate_list(self, items):
+        ul = UL()
+        for item in items:
+            ul <= self._generate_list_element(item)
+        return ul
+
+    def _generate_list_element(self, item):
+        li = LI(item["name"])
+        return li
 
 
