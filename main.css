@@ -1,0 +1,25 @@
+.container {
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+}
+#characters {
+    display: inline-block;
+    width: 140px;
+    border: 1px solid rgba(0,0,0,.03);
+    box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+}
+#characters p{
+    padding: 10px;
+    text-align: center;
+}
+#characters ul {
+    margin: 0;
+    padding: 0;
+}
+#characters li {
+    list-style-type: none;
+    text-transform: capitalize;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    padding: 10px 20px;
+}
