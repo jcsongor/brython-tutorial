@@ -40,3 +40,5 @@ class Characters:
         return li
 
 
+characters = Characters(list_id="characters", api=CharactersApi)
+characters.load()
