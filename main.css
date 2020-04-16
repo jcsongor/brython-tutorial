@@ -23,6 +23,10 @@
     font-family: Roboto, "Helvetica Neue", sans-serif;
     padding: 10px 20px;
 }
+#characters li:hover {
+    background: #ccc;
+    cursor: pointer;
+}
 #details {
     width: 200px;
     display: inline-block;
